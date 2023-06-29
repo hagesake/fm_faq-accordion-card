@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="../dist/styles.css" />
+
+		<!-- //Alpine.js CDN -->
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+		<!-- <script
+			defer
+			src="../node_modules/alpinejs/dist/cdn.min.js">
+
+			window.Alpine = Alpine;
+			Alpine.start();
+		</script> -->
+
+		<title>Document</title>
+	</head>
+	<body>
+		<div
+			class="outer-container bg-gradient-to-b from-soft-violet to-soft-blue flex flex-col items-center justify-center min-h-screen px-4 py-40">
+			<div
+				class="content font-Kumbh bg-light-grayish-blue rounded-xl md:flex md:max-w-3xl md:bg-desktopBg-main md:bg-cover md:bg-no-repeat md:bg-[-466px_66%] w-full max-w-lg px-8 md:pl-0 pb-12">
+				<div
+					class="images-container md:w-full md:bg-desktopBg-woman md:bg-contain md:bg-no-repeat md:bg-[-64px_center] relative flex flex-col md:justify-center items-center">
+					<img
+						src="../assets/images/illustration-woman-online-mobile.svg"
+						alt=""
+						class="absolute -top-[112px] max-w-[240px] md:hidden" />
+					<img
+						src="../assets/images/bg-pattern-mobile.svg"
+						alt=""
+						class="md:hidden" />
+
+					<img
+						src="../assets/images/illustration-box-desktop.svg"
+						alt=""
+						class="box-img md:inline-block right-[294px] w-2/5 mt-16 absolute hidden" />
+				</div>
+
+				<div class="faqs-container md:w-full">
+					<h1
+						class="md:text-left mt-8 text-4xl font-bold tracking-wider text-center">
+						FAQ
+					</h1>
+
+					<ul class="flex flex-col gap-4 mt-8">
+						<li
+							x-data="{open : false}"
+							class="fac">
+							<div class="flex items-center justify-between mb-2">
+								<p
+									:class="open ? 'text-very-dark-desaturated-blue font-semibold': 'text-dark-grayish-blue'"
+									class="hover:text-soft-red font-light">
+									How many team members can I invite?
+								</p>
+								<button>
+									<img
+										@click="open =! open"
+										:class="open && 'rotate-180 duration-500'"
+										src="../assets/images/icon-arrow-down.svg"
+										alt="" />
+								</button>
+							</div>
+							<p
+								x-show="open"
+								x-transition.duration.500ms
+								class="text-dark-grayish-blue font-light">
+								You can invite up to 2 additional users on the Free plan. There
+								is no limit on team members for the Premium plan.
+							</p>
+							<div
+								class="border-b-dark-grayish-blue opacity-30 mt-4 border"></div>
+						</li>
+
+						<li
+							x-data="{open : false}"
+							class="fac">
+							<div class="flex items-center justify-between mb-2">
+								<p
+									:class="open ? 'text-very-dark-desaturated-blue font-semibold': 'text-dark-grayish-blue'"
+									class="text-dark-grayish-blue hover:text-soft-red font-light">
+									What is the maximum file upload size?
+								</p>
+								<button>
+									<img
+										@click="open =! open"
+										:class="open && 'rotate-180 duration-500'"
+										src="../assets/images/icon-arrow-down.svg"
+										alt="" />
+								</button>
+							</div>
+							<p
+								x-show="open"
+								x-transition.duration.500ms
+								class="text-dark-grayish-blue font-light">
+								No more than 2GB. All files in your account must fit your
+								allotted storage space.
+							</p>
+							<div
+								class="border-b-dark-grayish-blue opacity-30 mt-4 border"></div>
+						</li>
+
+						<li
+							x-data="{open : false}"
+							class="fac">
+							<div class="flex items-center justify-between mb-2">
+								<p
+									:class="open ? 'text-very-dark-desaturated-blue font-semibold': 'text-dark-grayish-blue'"
+									class="text-dark-grayish-blue hover:text-soft-red font-light">
+									How do I reset my password?
+								</p>
+								<button>
+									<img
+										@click="open =! open"
+										:class="open && 'rotate-180 duration-500'"
+										src="../assets/images/icon-arrow-down.svg"
+										alt="" />
+								</button>
+							</div>
+							<p
+								x-show="open"
+								x-transition.duration.500ms
+								class="text-dark-grayish-blue font-light">
+								Click “Forgot password” from the login page or “Change password”
+								from your profile page. A reset link will be emailed to you.
+							</p>
+							<div
+								class="border-b-dark-grayish-blue opacity-30 mt-4 border"></div>
+						</li>
+
+						<li
+							x-data="{open : false}"
+							class="fac">
+							<div class="flex items-center justify-between mb-2">
+								<p
+									:class="open ? 'text-very-dark-desaturated-blue font-semibold': 'text-dark-grayish-blue'"
+									class="text-dark-grayish-blue hover:text-soft-red font-light">
+									Can I cancel my subscription?
+								</p>
+								<button>
+									<img
+										@click="open =! open"
+										:class="open && 'rotate-180 duration-500'"
+										src="../assets/images/icon-arrow-down.svg"
+										alt="" />
+								</button>
+							</div>
+							<p
+								x-show="open"
+								x-transition.duration.500ms
+								class="text-dark-grayish-blue font-light">
+								Yes! Send us a message and we’ll process your request no
+								questions asked.
+							</p>
+							<div
+								class="border-b-dark-grayish-blue opacity-30 mt-4 border"></div>
+						</li>
+
+						<li
+							x-data="{open : false}"
+							class="fac">
+							<div class="flex items-center justify-between mb-2">
+								<p
+									:class="open ? 'text-very-dark-desaturated-blue font-semibold ': 'text-dark-grayish-blue duration-500'"
+									class="text-dark-grayish-blue hover:text-soft-red font-light">
+									Do you provide additional support?
+								</p>
+								<button>
+									<img
+										@click="open =! open"
+										:class="open && 'rotate-180 duration-500'"
+										src="../assets/images/icon-arrow-down.svg"
+										alt="" />
+								</button>
+							</div>
+							<div
+								x-show="open"
+								x-transition.duration.500ms
+								class="text-dark-grayish-blue font-light">
+								Chat and email support is available 24/7. Phone lines are open
+								during normal business hours.
+							</div>
+							<div
+								class="border-b-dark-grayish-blue opacity-30 mt-4 border"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
